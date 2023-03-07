@@ -1,0 +1,10 @@
+:root {
+    --font-primary: "Gilroy", sans-serif;
+
+    --black: #000000;
+    --black-border: #0D0D0D;
+    --white: #ffffff;
+    --yellow: #F6A63A;
+    --yellow-3: rgba(246, 165, 58, 0.3);
+
+}
