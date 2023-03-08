@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import Link from 'next/link';
 import classes from './Button.module.css';
 
-const Button = forwardRef(({ children, actionType, type, icon, additionalClasses, onClick, href, isDefaultLink, ...rest }, ref) => {
+const Button = forwardRef(({ children, actionType, type, icon, additionalClasses, onClick, href, target, isDefaultLink, ...rest }, ref) => {
     const handleClick = typeof onClick === 'function' ? onClick : null;
 
     if (isDefaultLink && href) {
@@ -12,8 +12,9 @@ const Button = forwardRef(({ children, actionType, type, icon, additionalClasses
             <a
                 ref={ref}
                 href={href}
-                className={clsx(classes.btn, additionalClasses)}
+                className={clsx('is-clickable', classes.btn, additionalClasses)}
                 rel="noopener noreferrer nofollow noindex"
+                target={target}
                 {...rest}
             >
                 {children && <span className={icon ? 'mr-3' : ''}>{children}</span>}
@@ -27,7 +28,7 @@ const Button = forwardRef(({ children, actionType, type, icon, additionalClasses
             <Link
                 ref={ref}
                 href={href}
-                className={clsx(classes.btn, additionalClasses)}
+                className={clsx('is-clickable', classes.btn, additionalClasses)}
                 {...rest}
             >
                 {children && <span className={icon ? 'mr-3' : ''}>{children}</span>}
@@ -40,6 +41,7 @@ const Button = forwardRef(({ children, actionType, type, icon, additionalClasses
         <button
             ref={ref}
             className={clsx(
+                'is-clickable',
                 classes.btn,
                 classes[type],
                 additionalClasses
@@ -62,6 +64,7 @@ Button.propTypes = {
     href: PropTypes.string,
     additionalClasses: PropTypes.string,
     onClick: PropTypes.func,
+    target: PropTypes.string,
     isDefaultLink: PropTypes.bool,
     type: PropTypes.oneOf(['primary', 'rounded', 'link'])
 };
@@ -70,6 +73,7 @@ Button.defaultProps = {
     isDefaultLink: false,
     actionType: 'button',
     type: 'primary',
+    target: '_blank'
 };
 
 export default Button;
