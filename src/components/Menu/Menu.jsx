@@ -9,7 +9,7 @@ const Menu = ({ navList = null }) => {
             {navList?.map(({ lable, link, subMenu }, i) => {
                 if (subMenu) {
                     return (
-                        <li className="mr-4 xl:mr-10 last:mr-0" key={i}>
+                        <li className="mr-3 xl:mr-6 2xl:mr-10 last:mr-0" key={i}>
                             <Link className="group font-medium flex items-baseline pt-1 pb-1 hover:text-orange whitespace-nowrap is-clickable" href={link}>
                                 {lable}<PlusIcon className="ml-2 group-hover:[&>path]:stroke-orange" />
                             </Link>
@@ -17,7 +17,7 @@ const Menu = ({ navList = null }) => {
                     );
                 } else {
                     return (
-                        <li className="mr-4 xl:mr-10 last:mr-0" key={i}>
+                        <li className="mr-3 xl:mr-6 2xl:mr-10 last:mr-0" key={i}>
                             <Link className="font-medium pt-1 pb-1 hover:text-orange whitespace-nowrap is-clickable" href={link}>
                                 {lable}
                             </Link>

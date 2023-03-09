@@ -65,14 +65,14 @@ export const NAV_MENU = [
             }
         ]
     },
-    /*{
+    {
         lable: 'Pressroom',
         link: '/pressroom'
     },
     {
         lable: 'Consult',
         link: '/consult'
-    },*/
+    },
     {
         lable: 'Contact us',
         link: '/contact-us'

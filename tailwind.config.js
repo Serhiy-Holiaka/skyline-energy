@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'hero-bg': "url('/images/home-hero-bg.webp')",
+        'about-bg': "url('/images/about-bg.webp')",
        },
        colors: {
         black: 'var(--color-black)',

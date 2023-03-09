@@ -9,11 +9,11 @@ import { NAV_MENU } from '@/constants/navMenu';
 function Header() {
     return (
         <div className="absolute w-full flex items-center px-[30px] xl:px-[50px] py-[16px] bg-white">
-            <Link href="/" className="max-w-[230px] xl:max-w-none">
+            <Link href="/" className="max-w-[180px] xl:max-w-none">
                 <Image width={267} height={56} src="/images/logo.svg" alt="logo" />
             </Link>
             <Menu navList={NAV_MENU} />
-            <div className="flex ml-[40px] xl:ml-[80px]">
+            <div className="flex ml-[20px] xl:ml-[40px] 2xl:ml-[80px]">
                 <Button type="rounded" additionalClasses='mr-[15px] xl:mr-[30px]' icon={<SearchIcon />}/>
                 <Button type="rounded" additionalClasses={'uppercase'}>ua</Button>
             </div>
