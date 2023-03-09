@@ -6,12 +6,12 @@ import EmailIcon from '@/components/ui/icons/EmailIcon';
 import Input from '@/components/ui/form/Input';
 
 const About = () => {
-    const handleSubmit = (e) => {
+    const handleSubmit = e => {
         e.preventDefault();
-        console.log("Submit")
-    }
+        console.log('Submit');
+    };
     return (
-        <section className="w-full pt-20 pb-20 px-[30px] -mt-1 bg-about-bg bg-cover">
+        <section className="w-full pt-20 pb-20 px-[30px] -mt-1 -mb-1 bg-about-bg bg-cover">
             <Title>About our company</Title>
             <div className="max-w-6xl mx-auto mt-14 grid grid-cols-2 gap-7">
                 <div>
@@ -24,7 +24,7 @@ const About = () => {
                         United States. Оur company offers new and manufactured equipment, speciality chemicals, and
                         consulting services domestically and internationally.
                     </p>
-                    <h4 className="text-white font-bold text-xl">"With God All Things Are Possible!"</h4>
+                    <h4 className="text-white font-bold text-xl">{'"With God All Things Are Possible!"'}</h4>
                 </div>
                 <div className="relative rounded-lg overflow-hidden">
                     <Image
@@ -56,12 +56,14 @@ const About = () => {
                 </div>
                 <div>
                     <Title>Newsletter</Title>
-                    <form onSubmit={handleSubmit} className="max-w-[370px] mt-10 mx-auto">
-                        <Input
-                            type="email"
-                            placeholder="Email Address" 
-                        />
-                        <button type="submit">Submit</button>
+                    <form onSubmit={handleSubmit} className="grid grid-cols-1 max-w-[370px] mt-10 mx-auto">
+                        <Input type="email" placeholder="Email Address" additionalClasses="row-span-1 [&>div>input]:pr-[117px]" />
+                        <button
+                            className="is-clickable row-span-1 h-[52px] -mt-[52px] ml-auto w-[115px] border border-white rounded-r-[65px] bg-orange text-white text-[15px] leadin-none hover:bg-orange-400 active:bg-orange-500 z-10"
+                            type="submit"
+                        >
+                            Submit
+                        </button>
                     </form>
                 </div>
             </div>

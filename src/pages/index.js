@@ -8,7 +8,6 @@ const Home = () => {
             <Head>
                 <title>Skyline Energy - Home</title>
                 <meta name="description" content="Skyline Energy" />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>
             <section className="mx-auto h-screen max-h-[970px] bg-hero-bg bg-cover">
                 <div className="flex flex-col justify-center items-center w-full h-full">

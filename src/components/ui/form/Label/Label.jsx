@@ -1,11 +1,10 @@
 import { memo } from 'react';
 import PropTypes from 'prop-types';
-import classes from './Label.module.css';
 
 const Label = ({ component, htmlFor, children }) => {
     const CustomTag = component;
     return (
-        <CustomTag htmlFor={htmlFor} className={classes.label}>
+        <CustomTag htmlFor={htmlFor} className="block text-sm font-medium leading-[150%] whitespace-nowrap ml-6 mb-2 text-black transition-colors duration-300">
             {children}
         </CustomTag>
     );

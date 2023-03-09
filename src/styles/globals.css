@@ -26,6 +26,7 @@
 .active-clickable {
     position: relative !important;
 }
+
 .active-clickable::before {
     content: '';
     display: inline-block;
