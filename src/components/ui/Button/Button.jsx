@@ -28,7 +28,7 @@ const Button = forwardRef(({ children, actionType, type, icon, additionalClasses
             <Link
                 ref={ref}
                 href={href}
-                className={clsx('is-clickable', classes.btn, additionalClasses)}
+                className={clsx('is-clickable', classes.btn, classes[type], additionalClasses)}
                 {...rest}
             >
                 {children && <span className={icon ? 'mr-3' : ''}>{children}</span>}
@@ -66,7 +66,7 @@ Button.propTypes = {
     onClick: PropTypes.func,
     target: PropTypes.string,
     isDefaultLink: PropTypes.bool,
-    type: PropTypes.oneOf(['primary', 'rounded', 'link'])
+    type: PropTypes.oneOf(['primary', 'outline', 'rounded', 'link'])
 };
 
 Button.defaultProps = {

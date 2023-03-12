@@ -33,12 +33,31 @@
     border: 1px solid var(--color-black-border);
 }
 
-.rounded:hover {
+.rounded:hover,
+.rounded:active {
     background: var(--color-yellow);
     border-color: var(--color-orange);
 }
 
-.rounded:active {
+.outline {
+    display: inline-flex;
+    height: 52px;
+    padding: 17px 26px;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 600;
+    color: var(--color-white);
+    border-radius: 25px;
+    border: 1px solid var(--color-white);
+    transition: all ease .3s;
+}
+
+.outline:hover {
+    background: var(--color-orange);
+    border-color: var(--color-orange);
+}
+
+.outline:active {
     background: var(--color-yellow);
     border-color: var(--color-orange);
 }

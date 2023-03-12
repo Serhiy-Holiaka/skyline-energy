@@ -6,6 +6,7 @@ module.exports = {
       backgroundImage: {
         'hero-bg': "url('/images/home-hero-bg.webp')",
         'about-bg': "url('/images/about-bg.webp')",
+        'areas-bg': "url('/images/areas-bg.webp')",
        },
        colors: {
         black: 'var(--color-black)',
@@ -16,7 +17,7 @@ module.exports = {
         },
         white: 'var(--color-white)',
         orange: {
-            DEFAULT: 'var(--color-orange)', 
+            DEFAULT: 'var(--color-orange)',
         },
         yellow: {
             DEFAULT: 'var(--color-yellow)',
