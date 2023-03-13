@@ -7,6 +7,7 @@ module.exports = {
         'hero-bg': "url('/images/home-hero-bg.webp')",
         'about-bg': "url('/images/about-bg.webp')",
         'areas-bg': "url('/images/areas-bg.webp')",
+        'market-bg': "url('/images/market-bg.webp')",
        },
        colors: {
         black: 'var(--color-black)',
@@ -14,6 +15,11 @@ module.exports = {
         'border-color': 'var(--color-black-border)',
         grey: {
             DEFAULT: 'var(--color-gray)',
+            light: 'var(--color-gray-light)',
+            mid: 'var(--color-gray-mid)',
+        },
+        green: {
+          DEFAULT: 'var(--color-green)',
         },
         white: 'var(--color-white)',
         orange: {

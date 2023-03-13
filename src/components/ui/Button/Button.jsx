@@ -66,13 +66,13 @@ Button.propTypes = {
     onClick: PropTypes.func,
     target: PropTypes.string,
     isDefaultLink: PropTypes.bool,
-    type: PropTypes.oneOf(['primary', 'outline', 'rounded', 'link'])
+    type: PropTypes.oneOf(['', 'primary', 'outline', 'rounded', 'link'])
 };
 
 Button.defaultProps = {
     isDefaultLink: false,
     actionType: 'button',
-    type: 'primary',
+    type: '',
     target: '_blank'
 };
 
