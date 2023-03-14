@@ -4,10 +4,10 @@ import Image from 'next/image';
 import ArrowUpIcon from '@/components/ui/icons/ArrowUpIcon';
 
 
-const EnergyCard = ({ image, stats, description = '2016.10.06 end-of-day', period }) => {
+const EnergyCard = ({ image, title, stats, description, period }) => {
     return (
         <div className="flex flex-col max-w-[370px] w-full max-h-[460px] bg-white rounded-lg pt-[42px] pb-[50px] px-5 [&>*:not(:last-child)]:mb-[30px]">
-            <h5 className="text-[26px] leading-none font-bold text-[#0D0D0D]">Title</h5>
+            <h5 className="text-[26px] leading-none font-bold text-[#0D0D0D]">{title}</h5>
             <ul className="flex justify-between">
                 {stats.map((item, i) => (
                     <li
@@ -48,7 +48,9 @@ EnergyCard.propTypes = {
     image: PropTypes.string,
     title: PropTypes.string,
     description: PropTypes.string,
-    link: PropTypes.string,
+    stats: PropTypes.string,
+    period: PropTypes.arrayOf(PropTypes.object),
+    stats: PropTypes.arrayOf(PropTypes.object)
 };
 
 export default memo(EnergyCard);

@@ -72,7 +72,7 @@ const Home = () => {
                 </div>
             </section>
             <section className="bg-white py-[72px] px-[30px] xl:px-[50px]">
-                <Title textTransform="uppercase" color="black">
+                <Title textTransform="uppercase" textColor="black">
                     News
                 </Title>
                 <p className="text-center pt-6 text-lg">Stay tuned</p>

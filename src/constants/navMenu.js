@@ -45,29 +45,29 @@ export const NAV_MENU = [
     },
     {
         lable: 'Biogas',
-        link: '/biogas'
+        link: '/company'
     },
     {
         lable: 'Projects',
         link: '/projects',
-        subMenu: [
-            {
-                lable: 'Project-1',
-                link: '/projects-1',
-            },
-            {
-                lable: 'Project-2',
-                link: '/projects-2',
-            },
-            {
-                lable: 'Project-3',
-                link: '/projects-3',
-            }
-        ]
     },
     {
         lable: 'Pressroom',
-        link: '/pressroom'
+        link: '/pressroom',
+        subMenu: [
+            {
+                lable: 'Pressroom-1',
+                link: '/pressroom-1',
+            },
+            {
+                lable: 'Pressroom-2',
+                link: '/pressroom-2',
+            },
+            {
+                lable: 'Pressroom-3',
+                link: '/pressroom-3',
+            }
+        ]
     },
     {
         lable: 'Consult',
@@ -75,6 +75,6 @@ export const NAV_MENU = [
     },
     {
         lable: 'Contact us',
-        link: '/contact-us'
+        link: '/about'
     },
 ];
