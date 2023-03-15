@@ -2,9 +2,13 @@ import Head from 'next/head';
 import MainLayout from '@/components/layout/MainLayOut';
 import About from '@/components/About';
 import Title from '@/components/ui/Title';
+import { useRouter } from 'next/router';
 import Image from 'next/image';
 
 const AboutUs = () => {
+    const { basePath } = useRouter();
+    const imageBasePath = basePath ? `${basePath}/images` : '/images';
+
     return (
         <>
             <Head>
@@ -38,7 +42,7 @@ const AboutUs = () => {
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         style={{ objectFit: 'cover' }}
-                        src="/images/vision-img.webp"
+                        src={`${imageBasePath}/vision-img.webp`}
                         alt="about-image"
                     />
                 </div>
@@ -92,7 +96,7 @@ const AboutUs = () => {
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         style={{ objectFit: 'cover' }}
-                        src="/images/advance-img.webp"
+                        src={`${imageBasePath}/advance-img.webp`}
                         alt="about-image"
                         priority="true"
                     />

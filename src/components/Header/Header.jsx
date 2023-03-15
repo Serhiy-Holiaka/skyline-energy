@@ -13,7 +13,7 @@ function Header() {
 
     return (
         <div className="absolute w-full flex items-center px-[30px] xl:px-[50px] py-[16px] bg-white z-10">
-            <Link href="/" className="max-w-[180px] xl:max-w-none">
+            <Link onClick={(e) => e.stopPropagation()} href="/" className="max-w-[180px] xl:max-w-none">
                 <Image width={267} height={56} src={`${imageBasePath}/logo.svg`} alt="logo" />
             </Link>
             <Menu navList={NAV_MENU} />

@@ -1,9 +1,13 @@
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import MainLayout from '@/components/layout/MainLayOut';
 import About from '@/components/About';
 import Image from 'next/image';
 
 const Company = () => {
+    const { basePath } = useRouter();
+    const imageBasePath = basePath ? `${basePath}/images` : '/images';
+
     return (
         <>
             <Head>
@@ -16,7 +20,7 @@ const Company = () => {
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 60vw"
                         style={{ objectFit: 'cover' }}
-                        src="/images/company-img.webp"
+                        src={`${imageBasePath}/company-img.webp`}
                         alt="about-image"
                         priority="true"
                     />
@@ -43,7 +47,7 @@ const Company = () => {
                         className="mx-auto my-10"
                         width={255}
                         height={82}
-                        src="/images/signature.webp"
+                        src={`${imageBasePath}/signature.webp`}
                         alt="signature"
                     />
                     <p className="max-w-[327px] mx-auto text-white text-lg leading-[150%] text-center">Andrey Avramenko <br /> CEO, Skyline Energy Development</p>

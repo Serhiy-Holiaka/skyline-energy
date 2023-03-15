@@ -2,9 +2,13 @@ import { memo } from 'react';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 import ArrowUpIcon from '@/components/ui/icons/ArrowUpIcon';
+import { useRouter } from 'next/router';
 
 
 const EnergyCard = ({ image, title, stats, description, period }) => {
+    const { basePath } = useRouter();
+    const imageBasePath = basePath ? `${basePath}/images` : '/images';
+
     return (
         <div className="flex flex-col max-w-[370px] w-full max-h-[460px] bg-white rounded-lg pt-[42px] pb-[50px] px-5 [&>*:not(:last-child)]:mb-[30px]">
             <h5 className="text-[26px] leading-none font-bold text-[#0D0D0D]">{title}</h5>
@@ -34,7 +38,7 @@ const EnergyCard = ({ image, title, stats, description, period }) => {
                 ))}
             </ul>
             <p className="text-[15px] leading-none text-grey-mid font-medium">{description}</p>
-            <Image width={330} height={132} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src={`/images/cards/${image}`} alt="graph" />
+            <Image width={330} height={132} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src={`${imageBasePath}/cards/${image}`} alt="graph" />
             <ul className="flex justify-around items-center">
                 {period.map(({ active, value }, i) => (
                     <li key={i} className={`text-[15px] font-medium rounded-lg py-2 px-4 ${active ? 'text-white bg-orange' : 'text-grey-mid'}`}>{value}</li>

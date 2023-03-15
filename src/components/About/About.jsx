@@ -35,7 +35,7 @@ const About = () => {
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         style={{ objectFit: 'cover' }}
-                        src="/images/about-img.webp"
+                        src={`${imageBasePath}/about-img.webp`}
                         alt="about-image"
                     />
                 </div>
