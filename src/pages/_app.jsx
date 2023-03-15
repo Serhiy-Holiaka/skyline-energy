@@ -2,10 +2,13 @@ import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import PropTypes from 'prop-types';
 import { useDebounce } from '@/hooks/useDebounce';
-import { FONTS } from '@/constants/constants';
+import { useRouter } from 'next/router';
+//import { FONTS } from '@/constants/constants';
 import '@/styles/globals.css';
 
 const App = ({ Component, pageProps }) => {
+    const { basePath } = useRouter();
+    const fontBasePath = basePath ? `${basePath}/fonts` : '/fonts';
     const getLayout = Component.getLayout || (page => page);
     const [clickable, setClickable] = useState();
     const hide = useDebounce(() => {
@@ -34,6 +37,37 @@ const App = ({ Component, pageProps }) => {
         }
         hide();
     };
+
+    const FONTS = `
+        @font-face {
+            font-family: "Gilroy";
+            src: url(${fontBasePath}/Gilroy-Light.woff2) format("woff2");
+            font-weight: 300;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: "Gilroy";
+            src: url(${fontBasePath}/Gilroy-Regular.woff2) format("woff2");
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: "Gilroy";
+            src: url(${fontBasePath}/Gilroy-Medium.woff2) format("woff2");
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: "Gilroy";
+            src: url(${fontBasePath}/Gilroy-Bold.woff2) format("woff2");
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+`;
 
     return (
         <>

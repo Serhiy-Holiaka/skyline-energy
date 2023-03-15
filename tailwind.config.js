@@ -1,16 +1,17 @@
 /** @type {import('tailwindcss').Config} */
+const imageBasePath = process.env.APP_BASE_PATH ? `${process.env.APP_BASE_PATH}/images` : '/images';
 module.exports = {
     content: ['./src/pages/**/*.{js,ts,jsx,tsx}', './src/components/**/*.{js,ts,jsx,tsx}'],
     theme: {
         extend: {
             backgroundImage: {
-                'hero-bg': "url('/images/home-hero-bg.webp')",
-                'about-bg': "url('/images/about-bg.webp')",
-                'areas-bg': "url('/images/areas-bg.webp')",
-                'market-bg': "url('/images/market-bg.webp')",
-                'about-hero-bg': "url('/images/about-hero-bg.webp')",
-                'strategy-goals-bg': "url('/images/strategy-goals-bg.webp')",
-                'what-we-do-bg': "url('/images/we-do-bg.webp')",
+                'hero-bg': `url(${imageBasePath}/home-hero-bg.webp)`,
+                'about-bg': `url(${imageBasePath}/about-bg.webp)`,
+                'areas-bg': `url(${imageBasePath}/areas-bg.webp)`,
+                'market-bg': `url(${imageBasePath}/market-bg.webp)`,
+                'about-hero-bg': `url(${imageBasePath}/about-hero-bg.webp)`,
+                'strategy-goals-bg': `url(${imageBasePath}/strategy-goals-bg.webp)`,
+                'what-we-do-bg': `url(${imageBasePath}/we-do-bg.webp)`,
             },
             colors: {
                 black: {

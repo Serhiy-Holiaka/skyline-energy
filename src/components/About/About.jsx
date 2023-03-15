@@ -1,11 +1,15 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import Title from '@/components/ui/Title';
 import LocationIcon from '@/components/ui/icons/LocationIcon';
 import EmailIcon from '@/components/ui/icons/EmailIcon';
 import Input from '@/components/ui/form/Input';
 
 const About = () => {
+    const { basePath } = useRouter();
+    const imageBasePath = basePath ? `${basePath}/images` : '/images';
+
     const handleSubmit = e => {
         e.preventDefault();
         console.log('Submit');
@@ -16,7 +20,7 @@ const About = () => {
             <div className="max-w-6xl mx-auto mt-14 grid grid-cols-2 gap-7">
                 <div>
                     <Link href="/" className="block max-w-[180px] xl:max-w-none">
-                        <Image width={232} height={59} src="/images/logo-white.svg" alt="logo" />
+                        <Image width={232} height={59} src={`${imageBasePath}/logo-white.svg`} alt="logo" />
                     </Link>
                     <p className="text-white my-6 font-medium text-[15px] leading-[150%]">
                         Skyline Energy Development, LLC., is an independent oil and gas company engaged in the

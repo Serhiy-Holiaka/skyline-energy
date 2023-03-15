@@ -23,11 +23,11 @@ export const NAV_MENU = [
     },
     {
         lable: 'Investor',
-        link: '/investor'
+        link: '/company'
     },
     {
         lable: 'Store',
-        link: '/store',
+        link: '/about',
         subMenu: [
             {
                 lable: 'Store-1',
@@ -53,7 +53,7 @@ export const NAV_MENU = [
     },
     {
         lable: 'Pressroom',
-        link: '/pressroom',
+        link: '/about',
         subMenu: [
             {
                 lable: 'Pressroom-1',
@@ -71,7 +71,7 @@ export const NAV_MENU = [
     },
     {
         lable: 'Consult',
-        link: '/consult'
+        link: '/about'
     },
     {
         lable: 'Contact us',
